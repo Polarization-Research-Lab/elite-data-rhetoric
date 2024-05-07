@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Setup
+source /prl/code/env
+cd "$(dirname "$(realpath "$0")")"/ # <-- CD into the directory that this script is in
+
+# Execute Actual commands we care about
+(
+    set -e
+    $py3 ingest.py floor 
+    $py3 ingest.py statements
+    $py3 ingest.py newsletters
+    $py3 ingest.py tweets
+    $py3 ingest.py tv
+)

@@ -1,0 +1,17 @@
+#!/bin/bash
+cd "$(dirname "$(realpath "$0")")"/ # <-- CD into the directory that this script is in
+source ../env
+
+## Python
+(
+    set -e # start error-stop mode
+
+    ## Run
+    echo "CHUNK DATA AND INSERT INTO DATABASE"
+    $py3 -u insert.py
+
+    echo "CLASSIFY NEWLY INSERTED DATA"
+    $py3 -u classify.py
+
+    set +e # exit error-stop mode
+)

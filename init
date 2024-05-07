@@ -1,0 +1,8 @@
+source ./env
+
+$py3 -m pip install -r .python/requirements.txt
+
+
+
+
+

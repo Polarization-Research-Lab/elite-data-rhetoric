@@ -1,0 +1,18 @@
+.archive/
+secrets
+env
+.sublime/
+
+# Ingest
+ingest/monitor/
+ingest/actions/
+
+# Misc
+## Python
+__pycache__/
+
+## macOS
+.DS_Store
+
+## Windows
+desktop.ini
