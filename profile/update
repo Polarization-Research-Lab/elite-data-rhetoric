@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Setup
+source /prl/code/env
+cd "$(dirname "$(realpath "$0")")"/ # <-- CD into the directory that this script is in
+
+# Execute Actual commands we care about
+(
+    set -e
+    $py3 build.py
+)
